@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>pengenalan object</title>
+</head>
+<body>
+    <script>
+        // //object literal
+        // const literalrudi = {
+        //      nama : "rudi",  
+        //      sayHelo : function (){
+        //          console.log('hai saya karyawan')
+        //      }
+        //     }
+        //     literalRudi.sayHello()
+        
+        class employee{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            } 
+            
+            sayHello(){
+                console.log(`hai saya karyawan bernama : ${this.name}`);
+            }
+        }
+
+        const karyawan = new employee('rudi',21);
+        console.log(karyawan);
+        
+        // const bedjo = new employee('bedjo');
+        // const erica = new employee('erica');
+        
+        // rudi.sayHello();
+        // bedjo.sayHello();
+        // erica.sayHello();
+        // // console.log(rudi);
+        // // console.log(bedjo);
+        // // console.log(erica);
+    </script>
+</body>
+</html>

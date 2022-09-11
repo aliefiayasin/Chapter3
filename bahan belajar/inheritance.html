@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayHello(){
+                console.log(`Hi, saya adalah karyawan bernama ${this.name}`);
+            }
+        }
+        class Manager extends employee{
+            constructor(name, age,hp){
+                super(name,age);
+                this.hp = hp;
+            }
+            // sayHello(){
+            //     console.log(`hi saya adalah karyawan level manager bernama ${this.name}`);
+            // }
+            sayJabatan(){
+                super.sayHello();
+                console.log(`jabatan saya adalah Manager dengan hp : ${this.hp}`);
+            }
+
+        }
+        // const joko = new employee("joko",25);
+        // // joko.alamat = "jln abimanyu"; warning jangan lakukan ini
+        // console.log(joko);
+
+
+        // // staff CS
+        const joko = new employee("joko",25);
+        const susilo = new employee("susilo",26);
+        const bambang = new employee("bambang",27);
+
+        // // manager CS
+        const mega = new Manager("mega",29,"iphone 13");
+
+        // console.log(joko);
+        // console.log(susilo);
+        // console.log(mega);
+        // mega.sayHello();
+        mega.sayJabatan();
+        // joko.sayHello();
+
+        // joko.sayHello();
+
+            </script>
+</body>
+</html>

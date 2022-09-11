@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class menjadi entitas sendiri</title>
+</head>
+<body>
+    <script>
+
+
+
+// static capcity tidak akan muncul pada objek karena melekat pada class nya
+// jika bikin objek pada class selain itu tidak akan mengikuti karena melekat pada classnya
+
+
+
+        class ParkingArea {
+            static capacity = 50;
+            static #used = 0;
+            
+            static carParking(){
+               this.#used ++;
+               return this.#used;
+// tambah return disini biar nilainya bisa di kembalikan
+
+            }
+            static get availability(){
+                return this.capacity - this.#used;
+            }
+        }
+
+        console.log (ParkingArea);
+        console.log(ParkingArea.capacity);
+        console.log(ParkingArea.availability);
+        console.log(ParkingArea.carParking());
+        console.log(ParkingArea.availability);
+
+        const ParkirAbuBakar = new ParkingArea();
+        console.log(ParkirAbuBakar);
+
+
+
+
+
+        // const ParkirAbuBakar = new ParkingArea();
+        // console.log(ParkirAbuBakar);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // class Company{
+
+        //     static companyName = "PT. MargaSatwa" ;
+        // }
+        // class employee{
+        //     name;
+        //     age;
+        //     company = Company.companyName;
+
+        //     constructor(name,age){
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+
+        // const rudi = new employee('rudi',21);
+
+        // console.log(rudi);
+        
+// static tidak hanya bisa di pakai untuk properti tapi juga untuk methode
+
+
+
+        // saat class menjadi entitas sendiri di panggil dari manapn bisa, dari class manapun
+    //    // nilainya tidak akan berubah karena dia sudah jadi class dan nilai (objec)sendiri
+    //     class Configuration {
+    //         static port = 80;
+    //         static limitAccess = 60;
+    //         static appName = 'The Awesome App';
+
+       
+    //     }
+
+    //     // Configuration.port = 5000;
+    //     console.log(Configuration.port);
+
+
+
+
+
+        //     constructor(name){
+        //         this.companyName = name;
+        //     }
+        // }
+
+        // const apple = new Company('apple');
+        // console.log(apple.companyName);
+
+        // const IBM = new Company('IBM');
+        // console.log(IBM.companyName);
+
+        // console.log(Company.companyName)
+
+    </script>
+    
+</body>
+</html>
